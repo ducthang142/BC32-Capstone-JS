@@ -263,9 +263,13 @@ dom("#tblCart").addEventListener("click", (evt) => {
 
 //Lắng nghe sự kiện click vào nút Thanh toán
 dom("#purchase").addEventListener("click", () => {
+  if (carts.length === 0) {
+    //Nếu giỏ hàng rỗng:
+    alert("Không có gì để thanh toán!")
+  } else {
   //Xuất ra lời cảm ơn đã mua hàng
   alert("Cảm ơn quý khách đã mua hàng");
-
+  }
   //Set mảng carts về rỗng
   carts = [];
 

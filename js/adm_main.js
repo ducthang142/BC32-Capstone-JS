@@ -180,6 +180,7 @@ dom(".modal-footer").addEventListener("click", (evt) => {
   if (elType === "add") {
     //Gọi hàm addProduct để truyền vào object product mới vừa tạo
     addProduct(product);
+    alert("Đã thêm thành công")
 
     //Gọi hàm resetForm để reset lại inputs về ô trống
     resetForm();
