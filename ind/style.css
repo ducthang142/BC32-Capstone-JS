@@ -1,0 +1,459 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body  */
+body {
+    background: linear-gradient(to left, #8942a8, #ba382f);
+}
+
+/* Header  */
+header {
+  width: 100%;
+  background-color: white;
+  top: 2.5rem;
+  left: 0;
+}
+
+header .navbar {
+  padding: 0.5rem 0;
+}
+
+header .collapse {
+  justify-content: flex-end;
+}
+
+header .navbar-toggler {
+  background-color: #8f4198;
+}
+
+header .navbar-brand {
+  color: #b23942 !important;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+header .nav-item a {
+  font-size: 1.2rem;
+  color: #000c04 !important;
+  margin-right: 0.9rem;
+  position: relative;
+  transition: all 0.5s;
+}
+
+header .nav-item a:hover {
+  color: #9f3d70 !important;
+}
+
+header .nav-item a::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #9f3d70;
+  display: block;
+  transition: all 0.5s;
+}
+
+header .nav-item a:hover::after {
+  width: 100%;
+}
+
+header .active a {
+  color: #9f3d70 !important;
+}
+
+header .nav-item i {
+  font-size: 0.7rem;
+}
+
+
+/* Cart  */
+.cart .cart-icon {
+  position: fixed;
+  top: 85px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+.cart .cart-icon:hover {
+  color: #ba382f;
+}
+
+.cart .cart-icon i {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart .cart-icon span {
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  line-height: 1rem;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+  font-weight: 700;
+  top: 0.3rem;
+  right: 0.5rem;
+  user-select: none;
+}
+
+/* Lọc sản phẩm  */
+label {
+  color: white;
+  font-weight: 500;
+}
+
+/* Danh sách sản phẩm  */
+.list {
+  justify-content: space-between;
+  gap: 140px;
+}
+
+.card {
+  position: relative;
+  padding: 0;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.card img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card .card-text {
+  margin: 0;
+}
+
+.card .price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 15px;
+  visibility: hidden;
+}
+
+.card .price p {
+  background-color: red;
+  padding: 6px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.card .card-body{
+  position: absolute;
+  padding: 0;
+  text-align: center;
+  height: 15%;
+  width: 100%;
+  bottom: 0;
+  background-color: #343a40c4 !important;
+  transition: all 0.5s;
+}
+
+.card:hover .card-body {
+  height: 100%;
+}
+
+.card:hover .price {
+  visibility: visible;
+}
+
+/* Sale  */
+#sale {
+  background-image: url(./img/Back-school-banner.jpeg);
+  height: 430px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+#sale .overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to left, #8942a8be, #ba382fbd);
+  position: absolute;
+}
+
+#sale .container {
+  position: relative;
+  text-align: center;
+}
+
+#sale h1 {
+  color: rgb(167, 214, 72);
+  font-weight: 800;
+  font-size: 5rem;
+}
+
+#sale h2 {
+  color: rgb(1, 252, 168);
+  font-weight: 900;
+  font-size: 7rem;
+}
+
+#sale p {
+  color: rgb(96, 230, 248);
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+
+/* Footer  */
+ footer {
+  background-color: #111;
+}
+
+footer h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer__contact p {
+  color: #696969;
+}
+
+.contact__item i {
+  font-size: 0.9rem;
+  color: #696969;
+  margin-right: 0.8rem;
+}
+
+.contact__item a:hover i {
+  color: #fff;
+}
+
+footer a {
+  color: #696969;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer__item li {
+  list-style: none;
+  margin-bottom: 0.6rem;
+}
+
+footer .footer__copyright {
+  text-align: center;
+  color: #696969;
+  border-top: 1px solid #69696928;
+}
+
+footer .footer__copyright p {
+  margin-bottom: 0;
+}
+
+footer .footer__copyright a {
+  color: #f53626;
+}
+
+/* Back to top  */
+.backToTop {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: #8a42a5;
+  font-size: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.backToTop:hover {
+  background-color: #8a42a5;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+/* Responsive  */
+/* 1200px */
+@media screen and (max-width: 1200px) {
+  /* Danh sách sản phẩm  */
+  .list {
+    gap: 100px;
+  }
+
+  .card img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* 992px  */
+@media screen and (max-width: 992px) {
+  /* Danh sách sản phẩm  */
+  .list {
+    gap: 70px;
+  }
+
+  .card img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .card .card-body {
+    height: 20%;
+    padding: 0px;
+  }
+
+  .card .card-body h4 {
+    font-size: 18px;
+  }
+
+  .card .card-body p {
+    font-size: 14px;
+  }
+
+  /* Sale  */
+  #sale {
+    height: 330px;
+  }
+  #sale h1 {
+    color: rgb(167, 214, 72);
+    font-weight: 800;
+    font-size: 3.5rem;
+  }
+  
+  #sale h2 {
+    color: rgb(1, 252, 168);
+    font-weight: 900;
+    font-size: 4.5rem;
+  }
+  
+  #sale p {
+    color: rgb(96, 230, 248);
+    font-weight: 900;
+    font-size: 2.2rem;
+  }
+
+}
+
+/* 768px  */
+@media screen and (max-width: 768px) {
+  /* Danh sách sản phẩm  */
+  .list {
+    gap: 50px;
+  }
+
+  .card img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .card .card-body {
+    padding: 0px;
+  }
+
+  .card .card-body h4 {
+    font-size: 20px;
+  }
+
+  .card .card-body p {
+    font-size: 15px;
+  }
+
+  /* Sale  */
+  #sale {
+    height: 300px;
+  }
+  #sale h1 {
+    color: rgb(167, 214, 72);
+    font-weight: 800;
+    font-size: 3rem;
+  }
+  
+  #sale h2 {
+    color: rgb(1, 252, 168);
+    font-weight: 900;
+    font-size: 4rem;
+  }
+  
+  #sale p {
+    color: rgb(96, 230, 248);
+    font-weight: 900;
+    font-size: 1.7rem;
+  }
+
+}
+
+/* 576px  */
+@media screen and (max-width: 576px) {
+  /* Danh sách sản phẩm  */
+  .list {
+    gap: 30px;
+  }
+
+  .card img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card .card-body {
+    padding: 0px;
+  }
+
+  .card .card-body h4 {
+    font-size: 17px;
+  }
+
+  .card .card-body p {
+    font-size: 13px;
+  }
+
+  .card .card-body button {
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  /* Sale  */
+  #sale {
+    height: 250px;
+  }
+  #sale h1 {
+    color: rgb(167, 214, 72);
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+  
+  #sale h2 {
+    color: rgb(1, 252, 168);
+    font-weight: 900;
+    font-size: 3.5rem;
+  }
+  
+  #sale p {
+    color: rgb(96, 230, 248);
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+}
